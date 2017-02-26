@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2016-10-25T15:22:32 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Report_AllSales" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4880d1cc-582c-473c-8544-b4951fa47128">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="DBG"/>
+    <property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="647"/>
+    <property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="353"/>
+    <parameter name="NamePattern" class="java.lang.String">
+        <parameterDescription><![CDATA[Поле для фильтрации пациентов по фамилии]]></parameterDescription>
+        <defaultValueExpression><![CDATA["K"]]></defaultValueExpression>
+    </parameter>
+    <queryString>
+        <![CDATA[select * from Persons where LastName LIKE '$P!{NamePattern}%']]>
+    </queryString>
+    <field name="Id" class="java.lang.Long"/>
+    <field name="LastName" class="java.lang.String"/>
+    <field name="FirstName" class="java.lang.String"/>
+    <field name="MiddleName" class="java.lang.String"/>
+    <field name="Sex" class="java.lang.String"/>
+    <field name="BirthDate" class="java.lang.String"/>
+    <field name="RegistrationDate" class="java.sql.Timestamp"/>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="63" splitType="Stretch">
+            <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+            <rectangle>
+                <reportElement mode="Opaque" x="0" y="0" width="555" height="56" forecolor="rgba(255, 255, 255, 0.0)" backcolor="#00A0F0" uuid="a09b0b83-84f1-4c12-887d-37275da18994"/>
+                <graphicElement>
+                    <pen lineColor="#FFFFFF"/>
+                </graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement mode="Transparent" x="20" y="17" width="535" height="27" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="0aafddff-9243-4b89-b232-1e3ca813e274"/>
+                <textElement textAlignment="Left">
+                    <font fontName="Calibri" size="18" isBold="false"/>
+                </textElement>
+                <text><![CDATA[Отчет: Patients by namePattern]]></text>
+            </staticText>
+        </band>
+    </title>
+    <columnHeader>
+        <band height="21" splitType="Stretch">
+            <staticText>
+                <reportElement x="12" y="1" width="40" height="20" uuid="6695c76d-936c-4245-ba0b-948c5b8ee4bc"/>
+                <box padding="4">
+                    <pen lineWidth="1.0" lineColor="#B3B3B3"/>
+                </box>
+                <textElement>
+                    <font fontName="Times New Roman" size="10"/>
+                </textElement>
+                <text><![CDATA[Id]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="52" y="1" width="79" height="20" uuid="15f75c8e-5e32-43a6-a0ed-0e413087f63b"/>
+                <box padding="4">
+                    <pen lineWidth="1.0" lineColor="#B3B3B3"/>
+                </box>
+                <textElement>
+                    <font fontName="Times New Roman" size="10"/>
+                </textElement>
+                <text><![CDATA[LastName]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="131" y="1" width="81" height="20" uuid="bb4df4b3-cd29-4f9c-bdf9-f10f1af8b912"/>
+                <box padding="4">
+                    <pen lineWidth="1.0" lineColor="#B3B3B3"/>
+                </box>
+                <textElement>
+                    <font fontName="Times New Roman" size="10"/>
+                </textElement>
+                <text><![CDATA[FirstName]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="212" y="1" width="79" height="20" uuid="279dcad0-194a-4918-9f6d-6fb21487b106"/>
+                <box padding="4">
+                    <pen lineWidth="1.0" lineColor="#B3B3B3"/>
+                </box>
+                <textElement>
+                    <font fontName="Times New Roman" size="10"/>
+                </textElement>
+                <text><![CDATA[MiddleName]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="291" y="1" width="79" height="20" uuid="d1a51fd7-4dc5-4eb3-89c8-010cfbb2c050"/>
+                <box padding="4">
+                    <pen lineWidth="1.0" lineColor="#B3B3B3"/>
+                </box>
+                <textElement>
+                    <font fontName="Times New Roman" size="10"/>
+                </textElement>
+                <text><![CDATA[Sex]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="370" y="1" width="79" height="20" uuid="dff8423c-043c-4419-8117-b30ef718ecb3"/>
+                <box padding="4">
+                    <pen lineWidth="1.0" lineColor="#B3B3B3"/>
+                </box>
+                <textElement>
+                    <font fontName="Times New Roman" size="10"/>
+                </textElement>
+                <text><![CDATA[BirthDate]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="449" y="1" width="93" height="20" uuid="4c2dd26c-f3e0-45e6-b6b9-5c3f52f5c407"/>
+                <box padding="4">
+                    <pen lineWidth="1.0" lineColor="#B3B3B3"/>
+                </box>
+                <textElement>
+                    <font fontName="Times New Roman" size="10"/>
+                </textElement>
+                <text><![CDATA[RegistrationDate]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="21" splitType="Stretch">
+            <textField>
+                <reportElement x="12" y="1" width="40" height="20" uuid="48b42e1a-b15f-4ec0-aaa9-27b8e9839cbf"/>
+                <box padding="4">
+                    <pen lineWidth="0.0" lineColor="#B3B3B3"/>
+                </box>
+                <textElement>
+                    <font fontName="Times New Roman" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{Id}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="52" y="1" width="79" height="20" uuid="3f7ebb86-543a-430f-96ce-41dd97e5ffa1"/>
+                <box padding="4">
+                    <pen lineWidth="0.0" lineColor="#B3B3B3"/>
+                </box>
+                <textElement>
+                    <font fontName="Times New Roman" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{LastName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="131" y="1" width="81" height="20" uuid="3e1a8519-54d3-40c6-9484-c402ef3f66d3"/>
+                <box padding="4">
+                    <pen lineWidth="0.0" lineColor="#B3B3B3"/>
+                </box>
+                <textElement>
+                    <font fontName="Times New Roman" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{FirstName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="212" y="1" width="79" height="20" uuid="ee8a997d-99db-4d41-a301-ab366f9e4322"/>
+                <box padding="4">
+                    <pen lineWidth="0.0" lineColor="#B3B3B3"/>
+                </box>
+                <textElement>
+                    <font fontName="Times New Roman" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{MiddleName}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="292" y="1" width="79" height="20" uuid="010a8ab2-1e6c-4e0f-97ea-8cd3ef59acc9"/>
+                <box padding="4">
+                    <pen lineWidth="0.0" lineColor="#B3B3B3"/>
+                </box>
+                <textElement>
+                    <font fontName="Times New Roman" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{Sex}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="372" y="1" width="77" height="20" uuid="e4a4787b-f359-4835-b785-c5a8b62e5dee"/>
+                <box padding="4">
+                    <pen lineWidth="0.0" lineColor="#B3B3B3"/>
+                </box>
+                <textElement>
+                    <font fontName="Times New Roman" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{BirthDate}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="449" y="0" width="93" height="21" uuid="9dd68e71-16d6-48c5-bcf7-19d7e953f2ec"/>
+                <box padding="4">
+                    <pen lineWidth="0.0" lineColor="#B3B3B3"/>
+                </box>
+                <textElement>
+                    <font fontName="Times New Roman" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{RegistrationDate}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>

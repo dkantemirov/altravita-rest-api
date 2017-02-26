@@ -1,0 +1,9 @@
+{
+  "initialState": "default",
+  "apiHostname": "localhost",
+  "apiPort": "8080",
+  "apiPath": "/mis/rest/api/",
+  "apiAuthHeader": "Api-Key",
+  "logOutput": "BrowserConsole",
+  "logLevel": "ALL"
+}
